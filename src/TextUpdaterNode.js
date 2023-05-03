@@ -1,4 +1,4 @@
-import { React, useState, useCallback } from "react";
+import React, { useState, useCallback } from "react";
 import { Handle, Position } from "reactflow";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSquarePlus, faCircleXmark } from "@fortawesome/free-solid-svg-icons";

@@ -1,4 +1,4 @@
-import { useCallback } from "react";
+import React, { useCallback } from "react";
 import { useStore, getBezierPath } from "reactflow";
 
 import { getEdgeParams } from "./utils.js";
