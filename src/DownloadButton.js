@@ -13,12 +13,14 @@ function DownloadButton() {
   const onClick = () => {
     toPng(document.querySelector(".react-flow"), {
       filter: (node) => {
-        // we don't want to add the minimap and the controls to the image
-        if (
-          node?.classList?.contains("react-flow__minimap") ||
-          node?.classList?.contains("react-flow__controls")
-        ) {
-          return false;
+        if (node.classList) {
+          // we don't want to add the minimap and the controls to the image
+          if (
+            node.classList.contains("react-flow__minimap") ||
+            node.classList.contains("react-flow__controls")
+          ) {
+            return false;
+          }
         }
 
         return true;
