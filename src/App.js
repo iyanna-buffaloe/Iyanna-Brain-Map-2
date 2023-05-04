@@ -104,7 +104,6 @@ function Flow() {
         data: { label: text_label, value: [combineNodeEdge, ids, edge_list] }
       };
     } else {
-      console.log(old);
       text_label = "New Task";
       newnode = {
         id: eyed,
