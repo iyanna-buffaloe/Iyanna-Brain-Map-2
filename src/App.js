@@ -17,7 +17,7 @@ import ReactFlow, {
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleQuestion } from "@fortawesome/free-solid-svg-icons";
-
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import "reactflow/dist/style.css";
 
 import TextUpdaterNode from "./TextUpdaterNode.js";
@@ -243,32 +243,49 @@ function Flow() {
         fitView
         style={rfStyle}
         connectionMode={ConnectionMode.Loose}
-      >
-        <Controls />
-      </ReactFlow>
-      <div className="tool btn btn-primary tooltip">
-        <FontAwesomeIcon icon={faCircleQuestion} className="qmark" />
-        <div class="top">
-          <h3>Welcome to Brain Map!</h3>
-          <p>
-            Hi, I'm Iyanna Buffaloe and this is a webpage that I designed using
-            react and reactflow to visually map data.
-          </p>
-          <h3>How it Works</h3>
-          <p>
-            Hover on the main "Brain Map" node and click the plus button to add
-            more ideas to your graph.
+      ></ReactFlow>
+      <Controls />
+      <div className="buttons">
+        <div className="qtool tool btn btn-primary tooltip">
+          <FontAwesomeIcon icon={faCircleQuestion} className="qmark" />
+          <div class="top">
+            <h3>Welcome to Brain Map!</h3>
             <p>
-              {" "}
-              Pressing any node (except the main circle) and hitting "backspace"
-              will delete it.{" "}
+              Hi, I'm Iyanna Buffaloe and this is a webpage that I designed
+              using react and reactflow to visually map data.
             </p>
-          </p>
-          <p>
-            Clicking plus on these nodes will create sub-nodes, or "sub-tasks".
-          </p>
-          <p>Double click on the title of any node to change the name.</p>
-          <p>Click and drag any node to move it around. Happy Mapping! </p>
+            <h3>How it Works</h3>
+            <li>
+              Hover on the main "Brain Map" node and click the plus button to
+              add more ideas to your graph.
+              <li>
+                {" "}
+                Pressing any node (except the main circle) and hitting
+                "backspace" will delete it and any children.{" "}
+              </li>
+            </li>
+            <li>
+              Clicking plus on these nodes will create sub-nodes, or
+              "sub-tasks".
+            </li>
+            <li>Double click on the title of any node to change the name.</li>
+            <p>
+              Click and drag any node to move it around with it's children
+              nodes. Happy Mapping!{" "}
+            </p>
+          </div>
+        </div>
+        <div className="tool gtool btn btn-primary ">
+          <a
+            href="https://github.com/iyanna-buffaloe/Iyanna-Brain-Map-2"
+            target="_blank"
+          >
+            <FontAwesomeIcon
+              icon={faGithub}
+              className="tool qmark"
+              title="Link to Github Code"
+            />
+          </a>
         </div>
       </div>
     </div>

@@ -142,10 +142,6 @@
 }
 
 .tool {
-  position: absolute;
-  top: 90%;
-  right: 5%;
-  z-index: 10;
   background: rgba(0, 0, 0, 0);
   padding: 10px 20px;
   border-radius: 5px;
@@ -153,6 +149,14 @@
   cursor: pointer;
 }
 
+.buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: right;
+  position: relative;
+  top: -15%;
+}
 .qmark {
   font-size: 30px;
   color: #f49fe2;
@@ -168,7 +172,7 @@
   min-width: 230px;
   top: -20px;
   left: 50%;
-  transform: translate(-60%, -100%);
+  transform: translate(-10%, -100%);
   padding: 10px 20px;
   color: #eeeeee;
   background-color: #666666;
